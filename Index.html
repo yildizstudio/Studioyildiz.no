@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title>Studio YILDIZ</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
+        header {
+            text-align: center;
+            padding: 0;
+        }
+        .hero-image {
+            width: 100%;
+            max-width: 500px;
+            display: block;
+            margin: 40px auto 20px auto;
+        }
+        nav {
+            text-align: center;
+            background-color: #111;
+            padding: 15px 0;
+            border-top: 2px solid #333;
+            border-bottom: 2px solid #333;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        nav a {
+            color: #ffd700;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            max-width: 800px;
+            margin: auto;
+            padding: 40px 20px;
+            display: none;
+        }
+        section.active {
+            display: block;
+        }
+        h2 {
+            border-bottom: 1px solid #ffd700;
+            padding-bottom: 10px;
+            color: #ffd700;
+        }
+        a {
+            color: #ffd700;
+        }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            document.getElementById("forside").style.display = "none";
+            var sections = document.querySelectorAll("section");
+            sections.forEach(sec => sec.classList.remove("active"));
+            document.getElementById(sectionId).classList.add("active");
+        }
+    </script>
+</head>
+<body>
+
+<header id="forside">
+    <img src="forside.jpg" alt="Studio YILDIZ Forside" class="hero-image">
+</header>
+
+<nav>
+    <a href="#" onclick="showSection('omoss')">OM OSS</a>
+    <a href="#" onclick="showSection('apningstider')">ÅPNINGSTIDER</a>
+    <a href="#" onclick="showSection('adresse')">ADRESSE</a>
+    <a href="#" onclick="showSection('kontakt')">KONTAKT OSS</a>
+</nav>
+
+<section id="omoss">
+    <h2>OM OSS</h2>
+    <p>Velkommen til <strong>Studio YILDIZ</strong> – der moderne barberkunst møter old school tradisjon.<br>
+    Vi tilbyr en gjennomført, profesjonell barbershop-opplevelse med fokus på detaljer, kvalitet og god stemning.</p>
+    <p>Med over 10 års lokal erfaring og fagutdanning i barberfaget, står vi støtt i det vi gjør. Studio YILDIZ er bygget på tillit, stolthet og ekte kjærlighet for yrket – og det merkes.</p>
+    <p>Her møter du en moderne stil med røtter i klassiske teknikker. Vi er spesialister på <strong>bi-voks</strong>, <strong>threading</strong> (fjerning av ansiktshår med tråd), klassisk barbering, skjeggtrim og alt som hører med til en ekte barbershop.</p>
+    <p>Vi klipper ikke bare hår – vi bygger relasjoner.</p>
+</section>
+
+<section id="apningstider">
+    <h2>ÅPNINGSTIDER</h2>
+    <p><strong>Mandag</strong>: Stengt<br>
+    <strong>Tirsdag – Fredag</strong>: 10:00 – 19:00<br>
+    <strong>Lørdag</strong>: 10:00 – 16:00<br>
+    <strong>Søndag</strong>: Stengt</p>
+</section>
+
+<section id="adresse">
+    <h2>ADRESSE</h2>
+    <p>📍 <strong>Studio YILDIZ</strong><br>
+    Løkkeveien 31, Stavanger</p>
+    <p>Kom innom for en klipp, en prat og en kaffe – vi holder døra åpen for deg med stil og presisjon.</p>
+</section>
+
+<section id="kontakt">
+    <h2>KONTAKT OSS</h2>
+    <p>📧 E-post: <a href="mailto:support@studioyildiz.no">support@studioyildiz.no</a><br>
+    📞 Telefon: <em>kommer snart</em><br>
+    📸 Instagram: <a href="https://www.instagram.com/Studio_Yildiz" target="_blank">@Studio_Yildiz</a><br>
+    📘 Facebook: <a href="https://www.facebook.com/Studio-Yildiz" target="_blank">Studio-Yildiz</a></p>
+</section>
+
+</body>
+</html>
