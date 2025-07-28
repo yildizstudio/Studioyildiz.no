@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studio YILDIZ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --gold: #d4af37;
+      --white: #ffffff;
+      --black: #000000;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      background-color: #000;
+      color: #fff;
+      font-family: 'Montserrat', sans-serif; font-smooth: always; -webkit-font-smoothing: antialiased;
+    }
+
+    nav {
+      text-align: center;
+      border-top: 2px solid #333;
+      border-bottom: 2px solid #333;
+      background-color: #111;
+      padding: 15px 0;
+    }
+
+    nav a {
+      color: #d4af37;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 600;
+      font-size: 18px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 60px 20px;
+      display: none;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    h2 {
+      color: #d4af37;
+      font-weight: 600;
+      margin-top: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.8; letter-spacing: 0.2px;
+    }
+
+    .logo {
+      display: block;
+      max-width: 300px;
+      margin: 40px auto 20px auto;
+    }
+
+    .opening {
+      color: #d4af37;
+      font-size: 26px;
+      font-weight: bold;
+      text-align: center;
+      font-family: 'Georgia', serif;
+      margin-bottom: 30px;
+    }
+
+    a {
+      color: #d4af37;
+      text-decoration: none;
+    }
+  </style>
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll("section");
+      sections.forEach(s => s.classList.remove("active"));
+      document.getElementById(id).classList.add("active");
+    }
+
+    // Vis forsiden ved første lasting
+    window.onload = () => showSection('hjem');
+  </script>
+</head>
+<body>
+
+<nav>
+  <a href="#" onclick="showSection('hjem')">Hjem</a>
+  <a href="#" onclick="showSection('omoss')">Om oss</a>
+  <a href="#" onclick="showSection('apningstider')">Åpningstider</a>
+  <a href="#" onclick="showSection('adresse')">Adresse</a>
+  <a href="#" onclick="showSection('kontakt')">Kontakt oss</a>
+</nav>
+
+<section id="hjem">
+  <img src="logo.png" alt="Studio YILDIZ" class="logo">
+  <p class="opening">Vi åpner dørene<br>08.09.2025</p>
+</section>
+
+<section id="omoss">
+  <h2>Om oss</h2>
+  <p>
+    Studio YILDIZ er en moderne barbershop med røtter i tradisjonell barberkunst. Vi kombinerer
+    presisjon, stil og ekte håndverk for å gi deg den beste opplevelsen – enten du trenger en
+    klassisk klipp, en skarp fade eller en skikkelig barbering.
+  </p>
+</section>
+
+<section id="apningstider">
+  <h2>Åpningstider</h2>
+  <p>
+    Mandag – Fredag: 10:00 – 18:00<br>
+    Lørdag: 10:00 – 15:00<br>
+    Søndag: Stengt
+  </p>
+</section>
+
+<section id="adresse">
+  <h2>Adresse</h2>
+  <p>
+    Studio YILDIZ<br>
+    Løkkeveien 31<br>
+    4016 Stavanger
+  </p>
+</section>
+
+<section id="kontakt">
+  <h2>Kontakt oss</h2>
+  <p>
+    📞 Telefon: <a href="tel:+4712345678">+47 123 45 678</a><br>
+    ✉️ E-post: <a href="mailto:kontakt@studioyildiz.no">kontakt@studioyildiz.no</a>
+  </p>
+</section>
+
+</body>
+</html>
