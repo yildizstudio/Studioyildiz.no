@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Studio Yildiz</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+    nav {
+      background-color: #111;
+      text-align: center;
+      padding: 1em 0;
+    }
+    nav a {
+      color: gold;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+      font-size: 1.1em;
+      cursor: pointer;
+    }
+    .section {
+      display: none;
+      padding: 40px 20px;
+      max-width: 700px;
+      margin: auto;
+    }
+    .active {
+      display: block;
+    }
+    .section h2 {
+      color: gold;
+      font-size: 1.8em;
+    }
+    .section p, .section li {
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+    .hero {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+    .hero img {
+      width: 250px;
+      height: auto;
+    }
+    .hero h2 {
+      color: gold;
+      margin-top: 20px;
+    }
+    .socials {
+      margin-top: 10px;
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+    .socials .label {
+      color: white;
+    }
+    .socials .value {
+      color: gold;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a onclick="showSection('home')">Hjem</a>
+    <a onclick="showSection('om-oss')">Om oss</a>
+    <a onclick="showSection('apningstider')">Åpningstider</a>
+    <a onclick="showSection('adresse')">Adresse</a>
+    <a onclick="showSection('kontakt')">Kontakt oss</a>
+  </nav>
+
+  <div id="home" class="section active">
+    <div class="hero">
+      <img src="logo.png" alt="Studio Yildiz Logo">
+      <h2>Vi åpner dørene 08.09.2025</h2>
+    </div>
+  </div>
+
+  <div id="om-oss" class="section">
+    <h2>Om oss</h2>
+    <p>Studio Yildiz er et barbershop-konsept bygget på lidenskap, presisjon og stil. Hos oss får du mer enn bare en hårklipp – du får en opplevelse. Med fokus på kvalitet, hygiene og god stemning, skaper vi et miljø der kundene våre føler seg velkomne og ivaretatt. Vi kombinerer moderne teknikker med klassisk barberkunst for å levere det beste resultatet, hver gang.</p>
+  </div>
+
+  <div id="apningstider" class="section">
+    <h2>Åpningstider</h2>
+    <ul>
+      <li>Mandag: Stengt</li>
+      <li>Tirsdag – Fredag: 10:00 – 19:00</li>
+      <li>Lørdag: 10:00 – 16:00</li>
+      <li>Søndag: Stengt</li>
+    </ul>
+  </div>
+
+  <div id="adresse" class="section">
+    <h2>Adresse</h2>
+    <p>Studio Yildiz<br>Løkkeveien 31<br>4008 Stavanger</p>
+  </div>
+
+  <div id="kontakt" class="section">
+    <h2>Kontakt oss</h2>
+    <p>E-post: <a href="mailto:kontakt@studioyildiz.no" style="color:gold;">kontakt@studioyildiz.no</a></p>
+    <div class="socials">
+      <div><span class="label">Instagram:</span> <span class="value">Studio_Yildiz</span></div>
+      <div><span class="label">Facebook:</span> <span class="value">Studio-Yildiz</span></div>
+    </div>
+  </div>
+
+  <script>
+    function showSection(id) {
+      var sections = document.querySelectorAll('.section');
+      sections.forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
